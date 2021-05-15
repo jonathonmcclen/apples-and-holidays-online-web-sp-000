@@ -65,21 +65,31 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   
   holiday_hash.each do |seasons, holidays|
-    
     puts "#{seasons.capitalize}:"
     
+    
+    
     holidays.each do |holiday, array|
-      
       cap_holiday = holiday.to_s.split("_")
       count = 0
-      
-        while count < cap_holiday.length
-        
-          cap_holiday[count].capitalize!
-          count += 1
-          
-        end
-        puts "  #{cap_holiday.join(" ")}:"
+      while count < cap_holiday.length
+        cap_holiday[count].capitalize!
+        count += 1
+          if array.size <= 1
+            array[0]
+          elsif array.size == 2
+            last = array.last
+            array.pop
+            new_string = array.join
+            new_string << " and #{last}"
+          else
+            last = array.last
+            array.pop
+            new_string = array.join(", ")
+            new_string << ", and #{last}"
+          end 
+      end
+      puts "  #{cap_holiday.join(" ")}:"
     end 
   end 
 
