@@ -83,6 +83,8 @@ def all_supplies_in_holidays(holiday_hash)
           end 
           
       end
+      
+      
     end 
   end
 end
