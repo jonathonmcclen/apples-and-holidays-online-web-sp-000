@@ -75,24 +75,16 @@ def all_supplies_in_holidays(holiday_hash)
       while count < cap_holiday.length
         cap_holiday[count].capitalize!
         count += 1
+        
           if array.size <= 1
-            array[0]
-          elsif array.size == 2
-            last = array.last
-            array.pop
-            new_string = array.join
-            new_string << " and #{last}"
+            puts "  #{cap_holiday.join(" ")}:" array[0]
           else
-            last = array.last
-            array.pop
-            new_string = array.join(", ")
-            new_string << ", and #{last}"
+            puts "  #{cap_holiday.join(" ")}: #{array.join(", ")}"
           end 
+          
       end
-      puts "  #{cap_holiday.join(" ")}:"
     end 
-  end 
-
+  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
