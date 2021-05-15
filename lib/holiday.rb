@@ -80,8 +80,6 @@ def all_supplies_in_holidays(holiday_hash)
           
         end
         puts "   #{cap_holiday.join(" ")}:"
-      
-      binding.pry
     end 
   end 
 
