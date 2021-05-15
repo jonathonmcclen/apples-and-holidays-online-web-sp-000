@@ -79,7 +79,7 @@ def all_supplies_in_holidays(holiday_hash)
           count += 1
           
         end
-        puts "   #{cap_holiday.join(" ")}:"
+        puts "  #{cap_holiday.join(" ")}:"
     end 
   end 
 
