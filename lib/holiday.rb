@@ -77,7 +77,7 @@ def all_supplies_in_holidays(holiday_hash)
         count += 1
         
           if array.size <= 1
-            puts "  #{cap_holiday.join(" ")}:" array[0]
+            puts "  #{cap_holiday.join(" ")}: #{}" array[0]
           else
             puts "  #{cap_holiday.join(" ")}: #{array.join(", ")}"
           end 
